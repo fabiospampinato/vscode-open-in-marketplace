@@ -2,7 +2,6 @@
 /* IMPORT */
 
 import * as _ from 'lodash';
-import * as absolute from 'absolute';
 import * as openPath from 'open';
 import * as path from 'path';
 import * as vscode from 'vscode';
@@ -12,25 +11,13 @@ import Utils from './utils';
 
 async function open () {
 
-  const {rootPath} = vscode.workspace;
+  const {activeTextEditor} = vscode.window,
+        editorPath = activeTextEditor && activeTextEditor.document.fileName,
+        rootPath = Utils.folder.getRootPath ( editorPath );
 
   if ( !rootPath ) return vscode.window.showErrorMessage ( 'You have to open a project before being able to open it in the Marketplace' );
 
-  let projectPath = await Utils.folder.getWrapperPath ( rootPath, rootPath, 'package.json' );
-
-  if ( !projectPath ) { // Walk upwards from the currently open file
-
-    const {activeTextEditor} = vscode.window,
-          editorPath = activeTextEditor && activeTextEditor.document.fileName,
-          folderPath = editorPath && absolute ( editorPath ) && path.dirname ( editorPath );
-
-    if ( folderPath ) {
-
-      projectPath = await Utils.folder.getWrapperPath ( rootPath, folderPath, 'package.json' );
-
-    }
-
-  }
+  const projectPath = await Utils.folder.getWrapperPathOf ( rootPath, editorPath || rootPath, 'package.json' );
 
   if ( projectPath ) {
 
