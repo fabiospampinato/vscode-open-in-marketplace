@@ -19,7 +19,7 @@ ext install vscode-open-in-marketplace
 It adds 1 command to the command palette:
 
 ```js
-'Open in Marketplace' // Opens the current project in the Marketplace
+'Open in Marketplace' // Open the current project in the Marketplace
 ```
 
 ## License
