@@ -48,7 +48,6 @@ const Utils = {
 
   folder: {
 
-
     getRootPath ( basePath? ) {
 
       const {workspaceFolders} = vscode.workspace;
