@@ -1,4 +1,4 @@
-# VSC Open in Marketplace
+# Open in Marketplace
 
 <p align="center">
 	<img src="https://raw.githubusercontent.com/fabiospampinato/vscode-open-in-marketplace/master/resources/logo-128x128.png" alt="Logo">
@@ -8,10 +8,10 @@ Adds a command for opening the current project in the [Marketplace](https://mark
 
 ## Install
 
-Run the following in the command palette:
+Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-in-marketplace), or run the following in the command palette:
 
 ```shell
-ext install vscode-open-in-marketplace
+ext install fabiospampinato.vscode-open-in-marketplace
 ```
 
 ## Usage
