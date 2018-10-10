@@ -1,3 +1,6 @@
+### Version 1.2.5
+- Bundling with webpack
+
 ### Version 1.2.4
 - Removed a blank line
 - Updated readme
