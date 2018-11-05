@@ -1,7 +1,7 @@
 # Open in Marketplace
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/fabiospampinato/vscode-open-in-marketplace/master/resources/logo-128x128.png" alt="Logo">
+	<img src="https://raw.githubusercontent.com/fabiospampinato/vscode-open-in-marketplace/master/resources/logo.png" width="128" alt="Logo">
 </p>
 
 Adds a command for opening the current project in the [Marketplace](https://marketplace.visualstudio.com).
