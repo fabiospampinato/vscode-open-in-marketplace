@@ -1,6 +1,12 @@
 
 /* MAIN */
 
+const isObject = ( value: unknown ): value is object => {
+
+  return typeof value === 'object' && value !== null;
+
+};
+
 const isString = ( value: unknown ): value is string => {
 
   return typeof value === 'string';
@@ -9,4 +15,4 @@ const isString = ( value: unknown ): value is string => {
 
 /* EXPORT */
 
-export {isString};
+export {isObject, isString};
